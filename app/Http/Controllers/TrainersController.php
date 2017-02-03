@@ -132,6 +132,9 @@ class TrainersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data=Trainer::find($id);
+        //dd($data);
+        $data->delete();
+        return redirect()->route('trainers.index');
     }
 }

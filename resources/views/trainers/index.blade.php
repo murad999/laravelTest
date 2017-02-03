@@ -24,6 +24,7 @@
 				<td>{{Carbon\Carbon::parse($item->created_at)->format('l jS \of F Y h:i:s A')}}</td>
 				<td>{{Carbon\Carbon::parse($item->updated_at)->format('l jS \of F Y h:i:s A')}}</td>
 				<td><a class="btn btn-success" href="{{ URL::to('trainers/' . $item->id . '/edit') }}">Edit</a></td>
+				<td>{!! Form::delete(route('trainers.destroy',$item->id),'Delete',array('class' => 'btn btn-warning')) !!}</td>
 			</tr>
 				@php $sl++ @endphp
 			@endforeach 

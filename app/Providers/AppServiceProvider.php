@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        include_once __DIR__ . '/../Http/macros.php';
     }
 
     /**
@@ -23,6 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        include_once __DIR__ . '/../Http/myFunctions.php';
     }
 }
